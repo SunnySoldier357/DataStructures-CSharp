@@ -81,7 +81,7 @@ namespace SinglyLinkedList
 
         /// <summary>
         /// <para>
-        /// Returns a <see cref="bool"/> that indicates whether the provided value exists within the 
+        /// Returns a <see cref="bool"/> that indicates whether the provided value exists within the
         /// linked list.
         /// </para>
         /// <para>
@@ -267,7 +267,7 @@ namespace SinglyLinkedList
         /// from first to last.
         /// </para>
         /// <para>
-        /// Performance: Returning the enumerator instance is an O(1) operation. Enumerating 
+        /// Performance: Returning the enumerator instance is an O(1) operation. Enumerating
         /// every item is an O(n) operation.
         /// </para>
         /// </summary>

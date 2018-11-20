@@ -20,7 +20,7 @@ namespace SinglyLinkedList
         /// Constructs a new node with the specified value.
         /// </summary>
         /// <param name="value"></param>
-        public LinkedListNode(T value) => 
+        public LinkedListNode(T value) =>
             Value = value;
     }
 }
