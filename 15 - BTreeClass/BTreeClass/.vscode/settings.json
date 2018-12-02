@@ -1,0 +1,17 @@
+{
+    "spellright.language": [
+        "English (British)"
+    ],
+    "spellright.documentTypes": [
+        "css",
+        "csharp",
+        "html",
+        "java",
+        "json",
+        "jsonc",
+        "latex",
+        "markdown",
+        "plaintext",
+        "powershell"
+    ]
+}
