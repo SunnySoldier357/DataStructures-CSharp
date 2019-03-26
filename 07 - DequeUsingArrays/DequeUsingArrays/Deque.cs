@@ -30,6 +30,10 @@ namespace DequeUsingArrays
         /// </summary>
         public int Count => _size;
 
+        // Constructors
+        public Deque(int length = 10) =>
+            _items = new T[length];
+
         // Public Methods
 
         /// <summary>
