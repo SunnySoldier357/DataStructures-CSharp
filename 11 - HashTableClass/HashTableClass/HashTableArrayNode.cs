@@ -6,7 +6,7 @@ namespace HashTableClass
 {
     public class HashTableArrayNode<TKey, TValue>
     {
-        // Private Properties
+        //* Private Properties
 
         /// <summary>
         /// This list contains the actual data in the hash table. It chains
@@ -14,7 +14,7 @@ namespace HashTableClass
         /// </summary>
         private LinkedList<HashTableNodePair<TKey, TValue>> _items;
 
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -50,11 +50,12 @@ namespace HashTableClass
             {
                 if (Items != null)
                 {
-                    foreach (var node in _items)
+                !foreach (var node in _items)
                         yield return node.Key;
                 }
             }
         }
+
         /// <summary>
         /// <para>
         /// Returns an enumerator for all of the values in the list.
@@ -75,7 +76,7 @@ namespace HashTableClass
             }
         }
 
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
@@ -90,7 +91,7 @@ namespace HashTableClass
         /// <param name="key">The key of the item being added.</param>
         /// <param name="value">The value of the item being added.</param>
         /// <exception cref="ArgumentException"/>
-        public void Add(TKey key, TValue value) 
+        public void Add(TKey key, TValue value)
         {
             // Lazy init the linked list
             if (_items == null)
@@ -118,12 +119,12 @@ namespace HashTableClass
         /// Performance: O(1)
         /// </para>
         /// </summary>
-        public void Clear() 
+        public void Clear()
         {
-            //*  Note: This implementation simply clears the linked list; however,
-            //*        it would also be possible to assign the _items reference
-            //*        to null and let the garbage collector reclaim the memory. 
-            //*        The next call to Add would allocate a new linked list.
+            //!  Note: This implementation simply clears the linked list; however,
+            //!        it would also be possible to assign the _items reference
+            //!        to null and let the garbage collector reclaim the memory.
+            //!        The next call to Add would allocate a new linked list.
             
             if (_items != null)
                 _items.Clear();
@@ -144,13 +145,13 @@ namespace HashTableClass
         /// <see langword="true"/> if the item is removed; <see langword="false"/>
         /// otherwise.
         /// </returns>
-        public bool Remove(TKey key) 
+        public bool Remove(TKey key)
         {
             bool removed = false;
 
             if (_items != null)
             {
-                LinkedListNode<HashTableNodePair<TKey, TValue>> current = _items.First;
+                var current = _items.First;
 
                 while (current != null)
                 {
@@ -182,7 +183,7 @@ namespace HashTableClass
         /// <param name="key">The key whose value is sought.</param>
         /// <param name="value">The value associated with the specified key.</param>
     
-        public bool TryGetValue(TKey key, out TValue value) 
+        public bool TryGetValue(TKey key, out TValue value)
         {
             value = default(TValue);
 
@@ -208,7 +209,7 @@ namespace HashTableClass
         /// <summary>
         /// <para>
         /// Finds the key-value pair with the matching key and updates the
-        /// associated value. If the key is not found, an 
+        /// associated value. If the key is not found, an
         /// <see cref="ArgumentException"/> is thrown.
         /// </para>
         /// <para>
@@ -220,7 +221,7 @@ namespace HashTableClass
         /// <param name="key">The key of the item being updated.</param>
         /// <param name="value"The updated value.></param>
         /// <exception cref="ArgumentException"/>
-        public void Update(TKey key, TValue value) 
+        public void Update(TKey key, TValue value)
         {
             bool updated = false;
 

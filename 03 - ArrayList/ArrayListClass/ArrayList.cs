@@ -6,7 +6,10 @@ namespace ArrayListClass
 {
     public class ArrayList<T> : IList<T>
     {
-        // Public Properties
+        //* Private Properties
+        private T[] _items;
+
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -20,8 +23,8 @@ namespace ArrayListClass
 
         /// <summary>
         /// <para>
-        /// Returns an <see cref="int"/> that indicates the number of items currently in 
-        /// the collection. When the list is empty, the value is 0.
+        /// Returns an <see cref="int"/> that indicates the number of items currently
+        /// in the collection. When the list is empty, the value is 0.
         /// </para>
         /// <para>
         /// Performance: O(1)
@@ -57,10 +60,7 @@ namespace ArrayListClass
             }
         }
 
-        // Private Properties
-        private T[] _items;
-
-        // Constructors
+        //* Constructors
         public ArrayList() : this(0) { }
 
         public ArrayList(int length)
@@ -71,15 +71,15 @@ namespace ArrayListClass
             _items = new T[length];
         }
 
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
         /// Appends the provided value to the end of the collection.
         /// </para>
         /// <para>
-        /// Performance: O(1) when the array capacity is greater than Count; O(n) when
-        /// growth is necessary.
+        /// Performance: O(1) when the array capacity is greater than Count;
+        /// O(n) when growth is necessary.
         /// </para>
         /// </summary>
         /// <param name="item"></param>
@@ -107,8 +107,8 @@ namespace ArrayListClass
 
         /// <summary>
         /// <para>
-        /// Returns <see langword="true"/> if the provided value exists in the collection.
-        /// Otherwise it returns <see langword="false"/>.
+        /// Returns <see langword="true"/> if the provided value exists in the
+        /// collection. Otherwise it returns <see langword="false"/>.
         /// </para>
         /// <para>
         /// Performance: O(n)
@@ -120,8 +120,8 @@ namespace ArrayListClass
 
         /// <summary>
         /// <para>
-        /// Copies the contents of the internal array from start to finish into the provided array
-        /// starting at the specified array index.
+        /// Copies the contents of the internal array from start to finish into
+        /// the provided array starting at the specified array index.
         /// </para>
         /// <para>
         /// Performance: O(n)
@@ -129,12 +129,13 @@ namespace ArrayListClass
         /// </summary>
         /// <param name="array"></param>
         /// <param name="arrayIndex"></param>
-        public void CopyTo(T[] array, int arrayIndex) => Array.Copy(_items, 0, array, arrayIndex, Count);
+        public void CopyTo(T[] array, int arrayIndex) =>
+            Array.Copy(_items, 0, array, arrayIndex, Count);
 
         /// <summary>
         /// <para>
-        /// Returns the first index in the collection whose value equals the provided value.
-        /// Returns -1 if no matching value is found.
+        /// Returns the first index in the collection whose value equals the
+        /// provided value. Returns -1 if no matching value is found.
         /// </para>
         /// <para>
         /// Performance: O(n)
@@ -155,8 +156,9 @@ namespace ArrayListClass
 
         /// <summary>
         /// <para>
-        /// Adds the provided value at the specified index in the collection. If the specified 
-        /// index is equal to or larger than Count, an exception is thrown.
+        /// Adds the provided value at the specified index in the collection. If
+        /// the specified index is equal to or larger than Count, an exception
+        /// is thrown.
         /// </para>
         /// <para>
         /// Performance: O(n)
@@ -183,8 +185,9 @@ namespace ArrayListClass
 
         /// <summary>
         /// <para>
-        /// Removes the first item in the collection whose value matches the provided value.
-        /// Returns <see langword="true"/> if a value was removed. Otherwise it returns 
+        /// Removes the first item in the collection whose value matches the
+        /// provided value. Returns <see langword="true"/> if a value was removed.
+        /// Otherwise it returns
         /// <see langword="false"/>.
         /// </para>
         /// <para>
@@ -238,8 +241,8 @@ namespace ArrayListClass
         /// the array list values in order from first to last.
         /// </para>
         /// <para>
-        /// Performance: Returning the enumerator instance is an O(1) operation. Enumerating
-        /// every item is an O(n) operation.
+        /// Performance: Returning the enumerator instance is an O(1) operation.
+        /// Enumerating every item is an O(n) operation.
         /// </para>
         /// </summary>
         /// <returns></returns>
@@ -251,7 +254,7 @@ namespace ArrayListClass
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        // Private Methods
+        //* Private Methods
         private void growArray()
         {
             int newLength = _items.Length == 0 ? 16 : _items.Length << 1;

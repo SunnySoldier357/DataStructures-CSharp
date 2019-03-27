@@ -7,7 +7,7 @@ namespace HashTableClass
     /// <typeparam name="TValue">The type of value of the key-value pair.</typeparam>
     public class HashTableNodePair<TKey, TValue>
     {
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// The key. The key cannot be changed because it would affect the indexing
@@ -20,7 +20,7 @@ namespace HashTableClass
         /// </summary>
         public TValue Value { get; internal set; }
 
-        // Constructors
+        //* Constructors
 
         /// <summary>
         /// Constructs a key-value pair for storage in the hash table.

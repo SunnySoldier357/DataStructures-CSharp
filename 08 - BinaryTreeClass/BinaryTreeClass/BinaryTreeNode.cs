@@ -5,15 +5,15 @@ namespace BinaryTreeClass
     public class BinaryTreeNode<TNode> : IComparable<TNode>
         where TNode : IComparable<TNode>
     {
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
-        /// The left child node of the tree. (<see langword="null"/> if there is 
+        /// The left child node of the tree. (<see langword="null"/> if there is
         /// no left child)
         /// </summary>
         public BinaryTreeNode<TNode> Left { get; set; }
         /// <summary>
-        /// The right child node of the tree. (<see langword="null"/> if there is 
+        /// The right child node of the tree. (<see langword="null"/> if there is
         /// no right child)
         /// </summary>
         public BinaryTreeNode<TNode> Right { get; set; }
@@ -23,7 +23,7 @@ namespace BinaryTreeClass
         /// </summary>
         public TNode Value { get; private set; }
 
-        // Constructors
+        //* Constructors
 
         /// <summary>
         /// Constructs a new node with the specified value.
@@ -32,7 +32,7 @@ namespace BinaryTreeClass
         public BinaryTreeNode(TNode value) =>
             Value = value;
 
-        // Public Methods
+        //* Public Methods
         public int CompareTo(TNode other) =>
             Value.CompareTo(other);
     }

@@ -6,10 +6,10 @@ namespace HashTableClass
 {
     public class HashTableArray<TKey, TValue>
     {
-        // Private Properties
+        //* Private Properties
         private HashTableArrayNode<TKey, TValue>[] _array;
 
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -84,10 +84,10 @@ namespace HashTableClass
         /// <value></value>
         public int Capacity => _array.Length;
 
-        //* Note: It is important to remember that the capacity of the hash
-        //*       table array is not the same as the hash table's item count.
+        //! Note: It is important to remember that the capacity of the hash
+        //!       table array is not the same as the hash table's item count.
 
-        // Constructors
+        //* Constructors
 
         /// <summary>
         /// Constructs a new hash table array with the specified capacity.
@@ -96,7 +96,7 @@ namespace HashTableClass
         public HashTableArray(int capacity) =>
             _array = new HashTableArrayNode<TKey, TValue>[capacity];
 
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
@@ -215,7 +215,7 @@ namespace HashTableClass
             nodes.Update(key, value);
         }
 
-        // Private Properties
+        //* Private Properties
 
         /// <summary>
         /// <para>

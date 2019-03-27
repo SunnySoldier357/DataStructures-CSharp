@@ -142,11 +142,11 @@ namespace BinaryTreeClass
             //    +---+ +---+
             tree.Add(7);
 
-            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            // ~~ Removing items from a Binary Tree ~~
-            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            //* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            //* ~~ Removing items from a Binary Tree ~~
+            //* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-            // Case 1: The node to be removed has no right child.
+            //* Case 1: The node to be removed has no right child.
 
             //       +---+
             //       | 8 |
@@ -183,8 +183,8 @@ namespace BinaryTreeClass
             //    +---+ +---+
             tree.Remove(5);
 
-            // Case 2: The node to be removed has a right child which, in turn,
-            //         has no left child.
+            //* Case 2: The node to be removed has a right child which, in turn,
+            //*         has no left child.
 
             //       +---+
             //       | 8 |
@@ -235,8 +235,8 @@ namespace BinaryTreeClass
             // +---+ +---+
             tree.Remove(5);
 
-            // Case 3: The node to be removed has a right child which, in turn,
-            //         has a left child.
+            //* Case 3: The node to be removed has a right child which, in turn,
+            //*         has a left child.
 
             //       +---+
             //       | 8 |
@@ -287,9 +287,9 @@ namespace BinaryTreeClass
             // +---+ +---+
             tree.Remove(5);
 
-            // ~~~~~~~~~~~~~~~~
-            // ~~ Traversals ~~
-            // ~~~~~~~~~~~~~~~~
+            //* ~~~~~~~~~~~~~~~~
+            //* ~~ Traversals ~~
+            //* ~~~~~~~~~~~~~~~~
 
             //       +---+
             //       | 4 |
@@ -301,7 +301,7 @@ namespace BinaryTreeClass
             //    | 2 | | 5 |
             //    +---+ +---+
             //      |     |
-            //   -------  ---- 
+            //   -------  ----
             //   |     |     |
             // +---+ +---+ +---+
             // | 1 | | 3 | | 7 |
@@ -317,7 +317,7 @@ namespace BinaryTreeClass
                 4, 2, 1, 3, 5, 7, 6, 8
             };
 
-            // 1) Preorder Traversal
+            //* 1) Preorder Traversal
 
             // Order: 4, 2, 1, 3, 5, 7, 6, 8
 
@@ -327,14 +327,14 @@ namespace BinaryTreeClass
             // hierarchy
             tree.PreOrderTraversal(value => copy.Add(value));
 
-            // 2) Postorder Traversal
+            //* 2) Postorder Traversal
 
             // Order: 1, 3, 2, 6, 8, 7, 5, 4
 
             // Delete in a way that makes the least amount of work for Remove()
             copy.PostOrderTraversal(value => copy.Remove(value));
 
-            // 3) Inorder Traversal
+            //* 3) Inorder Traversal
 
             // Order: 1, 2, 3, 4, 5, 6, 7, 8
 

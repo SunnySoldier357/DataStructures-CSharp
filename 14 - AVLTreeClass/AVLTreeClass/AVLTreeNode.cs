@@ -63,7 +63,7 @@ namespace AVLTreeClass
             _tree = tree;
         }
 
-        // Internal Methods
+        //* Internal Methods
         internal void Balance()
         {
             if (state == TreeState.RightHeavy)

@@ -23,7 +23,7 @@ namespace PriorityQueueClass
             Priority = priority;
         }
 
-        // Interface Implementations
+        //* Interface Implementations
         public int CompareTo(Data other)
         {
             int pri = Priority.CompareTo(other.Priority);
@@ -33,7 +33,7 @@ namespace PriorityQueueClass
             return pri;
         }
 
-        // Overriden Methods
+        //* Overridden Methods
         public override string ToString() =>
             string.Format("[{0} : {1}] {2}", Priority, Age.Milliseconds,
                 Message);

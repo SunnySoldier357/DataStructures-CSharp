@@ -5,14 +5,14 @@ namespace HashTableClass
 {
     public class HashTable<TKey, TValue>
     {
-        // Constants
+        //* Constants
 
         /// <summary>
         /// If the array exceeds this fill percentage, it will grow.
         /// </summary>
         private const double FILL_FACTOR = 0.75;
 
-        // Private Properties
+        //* Private Properties
 
         /// <summary>
         /// The array where the items are stored.
@@ -30,7 +30,7 @@ namespace HashTableClass
         /// </summary>
         private int _maxItemsAtCurrentSize;
 
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -76,7 +76,7 @@ namespace HashTableClass
             }
         }
 
-        // Constructors
+        //* Constructors
 
         /// <summary>
         /// Constructs a hash table with the default capacity.
@@ -100,7 +100,7 @@ namespace HashTableClass
             _maxItemsAtCurrentSize = (int)(initialCapacity * FILL_FACTOR) + 1;
         }
 
-        // Operator Overloads
+        //* Operator Overloads
 
         /// <summary>
         /// <para>
@@ -127,7 +127,7 @@ namespace HashTableClass
             set => _array.Update(key, value);
         }
 
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>

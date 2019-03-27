@@ -2,7 +2,7 @@ namespace SkipListClass
 {
     public class SkipListNode<T>
     {
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// The array of links. The number of items is the height of the links.
@@ -16,7 +16,7 @@ namespace SkipListClass
         /// <value></value>
         public T Value { get; private set; }
 
-        // Constructors
+        //* Constructors
 
         /// <summary>
         /// Creates a new node with the specified value at the indicated link

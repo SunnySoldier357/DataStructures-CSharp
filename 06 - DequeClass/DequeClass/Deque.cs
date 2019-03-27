@@ -5,11 +5,15 @@ namespace DequeClass
 {
     public class Deque<T>
     {
-        // Public Properties
+        //* Private Properties
+        private LinkedList<T> _items = new LinkedList<T>();
+
+        //* Public Properties
 
         /// <summary>
         /// <para>
-        /// Returns the number of items currently in the deque, or 0 if the deque is empty.
+        /// Returns the number of items currently in the deque, or 0 if the deque
+        /// is empty.
         /// </para>
         /// <para>
         /// Performance: O(1)
@@ -17,14 +21,11 @@ namespace DequeClass
         /// </summary>
         public int Count => _items.Count;
 
-        // Private Properties
-        private LinkedList<T> _items = new LinkedList<T>();
-
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
-        /// Adds the provided value to the head of the queue. This will be the next 
+        /// Adds the provided value to the head of the queue. This will be the next
         /// item dequeued by <see cref="DequeueFirst"/>.
         /// </para>
         /// <para>
@@ -48,7 +49,7 @@ namespace DequeClass
 
         /// <summary>
         /// <para>
-        /// Removes and returns the first item in the deque. An 
+        /// Removes and returns the first item in the deque. An
         /// <see cref="InvalidOperationException"/> is thrown if the deque is empty.
         /// </para>
         /// <para>
@@ -70,7 +71,7 @@ namespace DequeClass
 
         /// <summary>
         /// <para>
-        /// Removes and returns the last item in the deque. An 
+        /// Removes and returns the last item in the deque. An
         /// <see cref="InvalidOperationException"/> is thrown if the deque is empty.
         /// </para>
         /// <para>
@@ -92,8 +93,9 @@ namespace DequeClass
 
         /// <summary>
         /// <para>
-        /// Returns the first item in the deque but leaves the collection unchanged. An
-        /// <see cref="InvalidOperationException"/> is thrown if the deque is empty.
+        /// Returns the first item in the deque but leaves the collection unchanged.
+        /// An <see cref="InvalidOperationException"/> is thrown if the deque is
+        /// empty.
         /// </para>
         /// <para>
         /// Performance: O(1)
@@ -112,8 +114,9 @@ namespace DequeClass
 
         /// <summary>
         /// <para>
-        /// Returns the last item in the deque but leaves the collection unchanged. An
-        /// <see cref="InvalidOperationException"/> is thrown if the deque is empty.
+        /// Returns the last item in the deque but leaves the collection unchanged.
+        /// An <see cref="InvalidOperationException"/> is thrown if the deque is
+        /// empty.
         /// </para>
         /// <para>
         /// Performance: O(1)

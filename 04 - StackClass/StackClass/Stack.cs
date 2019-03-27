@@ -5,7 +5,10 @@ namespace StackClass
 {
     public class Stack<T>
     {
-        // Public Properties
+        //* Private Properties
+        private LinkedList<T> _items = new LinkedList<T>();
+
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -17,10 +20,7 @@ namespace StackClass
         /// </summary>
         public int Count => _items.Count;
 
-        // Private Properties
-        private LinkedList<T> _items = new LinkedList<T>();
-
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
@@ -35,8 +35,8 @@ namespace StackClass
 
         /// <summary>
         /// <para>
-        /// Removes and returns the last item added to the stack. If the stack is empty,
-        /// an <see cref="InvalidOperationException"/> is thrown.
+        /// Removes and returns the last item added to the stack. If the stack
+        /// is empty, an <see cref="InvalidOperationException"/> is thrown.
         /// </para>
         /// <para>
         /// Performance: O(1)
@@ -57,8 +57,9 @@ namespace StackClass
 
         /// <summary>
         /// <para>
-        /// Returns the last item added to the stack but leaves the item on the stack. If
-        /// the stack is empty, an <see cref="InvalidOperationException"/> is thrown.
+        /// Returns the last item added to the stack but leaves the item on the
+        /// stack. If the stack is empty, an <see cref="InvalidOperationException"/>
+        /// is thrown.
         /// </para>
         /// <para>
         /// Performance: O(1)

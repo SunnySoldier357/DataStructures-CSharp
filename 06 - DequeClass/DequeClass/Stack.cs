@@ -2,7 +2,10 @@ namespace DequeClass
 {
     public class Stack<T>
     {
-        // Public Properties
+        //* Private Properties
+        private Deque<T> _items = new Deque<T>();
+
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -14,10 +17,7 @@ namespace DequeClass
         /// </summary>
         public int Count => _items.Count;
 
-        // Private Properties
-        private Deque<T> _items = new Deque<T>();
-
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -32,8 +32,8 @@ namespace DequeClass
 
         /// <summary>
         /// <para>
-        /// Removes and returns the last item added to the stack. If the stack is empty,
-        /// an <see cref="InvalidOperationException"/> is thrown.
+        /// Removes and returns the last item added to the stack. If the stack
+        /// is empty, an <see cref="InvalidOperationException"/> is thrown.
         /// </para>
         /// <para>
         /// Performance: O(1)
@@ -45,8 +45,9 @@ namespace DequeClass
 
         /// <summary>
         /// <para>
-        /// Returns the last item added to the stack but leaves the item on the stack. If
-        /// the stack is empty, an <see cref="InvalidOperationException"/> is thrown.
+        /// Returns the last item added to the stack but leaves the item on the
+        /// stack. If the stack is empty, an <see cref="InvalidOperationException"/>
+        /// is thrown.
         /// </para>
         /// <para>
         /// Performance: O(1)

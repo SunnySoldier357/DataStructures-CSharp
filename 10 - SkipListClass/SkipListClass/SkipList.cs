@@ -7,7 +7,7 @@ namespace SkipListClass
     public class SkipList<T> : ICollection<T>
         where T : IComparable<T>
     {
-        // Private Properties
+        //* Private Properties
 
         /// <summary>
         /// The number of items currently in the list.
@@ -29,7 +29,7 @@ namespace SkipListClass
         /// </summary>
         private SkipListNode<T> _head;
 
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -52,10 +52,7 @@ namespace SkipListClass
         /// </summary>
         public int Count => _count;
 
-        // Constructors
-        public SkipList() { }
-
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
@@ -252,7 +249,7 @@ namespace SkipListClass
         IEnumerator IEnumerable.GetEnumerator() =>
             GetEnumerator();
 
-        // Private Properties
+        //* Private Methods
         private int pickRandomLevel()
         {
             int rand = _rand.Next();

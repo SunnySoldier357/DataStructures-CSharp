@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DequeUsingArrays
+﻿namespace DequeUsingArrays
 {
     class Program
     {

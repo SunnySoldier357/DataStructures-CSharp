@@ -4,7 +4,7 @@ namespace DequeUsingArrays
 {
     public class Deque<T>
     {
-        // Private Properties
+        //* Private Properties
 
         // The index of the first (oldest) item in the queue.
         private int _head = 0;
@@ -17,7 +17,7 @@ namespace DequeUsingArrays
 
         private T[] _items;
 
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -30,11 +30,11 @@ namespace DequeUsingArrays
         /// </summary>
         public int Count => _size;
 
-        // Constructors
+        //* Constructors
         public Deque(int length = 10) =>
             _items = new T[length];
 
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
@@ -52,8 +52,8 @@ namespace DequeUsingArrays
             if (_items.Length == _size)
                 allocateNewArray(1);
 
-            // Since we know the array isn't full and _head is greater than 0, we know
-            // that the slot in front of head is open.
+            // Since we know the array isn't full and _head is greater than 0, we
+            // know that the slot in front of head is open.
             if (_head > 0)
                 _head--;
             else
@@ -201,7 +201,7 @@ namespace DequeUsingArrays
             return _items[_tail];
         }
 
-        // Private Methods
+        //* Private Methods
         private void allocateNewArray(int startingIndex)
         {
             int newLength = _size == 0 ? 4 : _size * 2;
@@ -214,7 +214,8 @@ namespace DequeUsingArrays
 
                 // Copy the contents...
                 // If the array has no wrapping, just copy the valid range.
-                // Else, copy from head to end of the array and then from 0 to the tail.
+                // Else, copy from head to end of the array and then from 0 to
+                //     the tail.
                 
                 // If tail is less than head, we've wrapped.
                 if (_tail < _head)

@@ -5,7 +5,7 @@ namespace SinglyLinkedList
 {
     public class LinkedList<T> : ICollection<T>
     {
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -19,8 +19,8 @@ namespace SinglyLinkedList
 
         /// <summary>
         /// <para>
-        /// Returns an <see cref="int"/> indicating the number of items currently in the list.
-        /// When the list is empty, the value returned is 0.
+        /// Returns an <see cref="int"/> indicating the number of items currently
+        /// in the list. When the list is empty, the value returned is 0.
         /// </para>
         /// <para>
         /// Performance: O(1)
@@ -31,11 +31,11 @@ namespace SinglyLinkedList
         public LinkedListNode<T> Head => _head;
         public LinkedListNode<T> Tail => _tail;
 
-        // Private Properties
+        //* Private Properties
         private LinkedListNode<T> _head;
         private LinkedListNode<T> _tail;
 
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
@@ -81,8 +81,8 @@ namespace SinglyLinkedList
 
         /// <summary>
         /// <para>
-        /// Returns a <see cref="bool"/> that indicates whether the provided value exists within the
-        /// linked list.
+        /// Returns a <see cref="bool"/> that indicates whether the provided value
+        /// exists within the linked list.
         /// </para>
         /// <para>
         /// Performance: O(n)
@@ -107,8 +107,8 @@ namespace SinglyLinkedList
 
         /// <summary>
         /// <para>
-        /// Copies the contents of the linked list from start to finish into the provided
-        /// array, starting at the specified array index.
+        /// Copies the contents of the linked list from start to finish into the
+        /// provided array, starting at the specified array index.
         /// </para>
         /// <para>
         /// Performance: O(n)
@@ -129,8 +129,9 @@ namespace SinglyLinkedList
 
         /// <summary>
         /// <para>
-        /// Removes the first node in the list whose value equals the provided value. The
-        /// method returns <see langword="true"/> if a value was removed. Otherwise it returns <see langword="false"/>.
+        /// Removes the first node in the list whose value equals the provided
+        /// value. The method returns <see langword="true"/> if a value was
+        /// removed. Otherwise it returns <see langword="false"/>.
         /// </para>
         /// <para>
         /// Performance: O(n)
@@ -196,7 +197,8 @@ namespace SinglyLinkedList
 
         /// <summary>
         /// <para>
-        /// Removes the first value from the list. If the list is empty, no action is taken.
+        /// Removes the first value from the list. If the list is empty, no action
+        /// is taken.
         /// </para>
         /// <para>
         /// Performance: O(1)
@@ -222,7 +224,8 @@ namespace SinglyLinkedList
 
         /// <summary>
         /// <para>
-        /// Removes the last node from the list. If the list is empty, no action is performed.
+        /// Removes the last node from the list. If the list is empty, no action
+        /// is performed.
         /// </para>
         /// <para>
         /// Performance: O(n)
@@ -263,12 +266,12 @@ namespace SinglyLinkedList
 
         /// <summary>
         /// <para>
-        /// Returns an <see cref="IEnumerator{T}"/> instance that allows enumerating the linked list values
-        /// from first to last.
+        /// Returns an <see cref="IEnumerator{T}"/> instance that allows enumerating
+        /// the linked list values from first to last.
         /// </para>
         /// <para>
-        /// Performance: Returning the enumerator instance is an O(1) operation. Enumerating
-        /// every item is an O(n) operation.
+        /// Performance: Returning the enumerator instance is an O(1) operation.
+        /// Enumerating every item is an O(n) operation.
         /// </para>
         /// </summary>
         /// <returns></returns>
@@ -283,6 +286,7 @@ namespace SinglyLinkedList
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable<T>)this).GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() =>
+            ((IEnumerable<T>)this).GetEnumerator();
     }
 }

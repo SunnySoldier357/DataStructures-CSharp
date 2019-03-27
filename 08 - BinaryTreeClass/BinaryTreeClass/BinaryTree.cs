@@ -7,12 +7,12 @@ namespace BinaryTreeClass
     public class BinaryTree<T> : IEnumerable<T>
         where T : IComparable<T>
     {
-        // Private Properties
+        //* Private Properties
         private BinaryTreeNode<T> _head;
 
         private int _count;
 
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -24,7 +24,7 @@ namespace BinaryTreeClass
         /// </summary>
         public int Count => _count;
 
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
@@ -56,7 +56,7 @@ namespace BinaryTreeClass
         /// Performance: O(1)
         /// </para>
         /// </summary>
-        public void Clear() 
+        public void Clear()
         {
             _head = null;
             _count = 0;
@@ -102,7 +102,8 @@ namespace BinaryTreeClass
 
             _count--;
 
-            // Case 1: If current has no right child, current's left replaces current.
+            // Case 1: If current has no right child, current's left replaces
+            //         current.
             if (current.Right == null)
             {
                 if (parent == null)
@@ -239,7 +240,7 @@ namespace BinaryTreeClass
             if (_head != null)
             {
                 // Store the nodes we've skipped in this stack (avoids recursion)
-                Stack<BinaryTreeNode<T>> stack = new Stack<BinaryTreeNode<T>>();
+                var stack = new StackClass.Stack<BinaryTreeNode<T>>();
 
                 BinaryTreeNode<T> current = _head;
 
@@ -319,7 +320,7 @@ namespace BinaryTreeClass
         IEnumerator IEnumerable.GetEnumerator() =>
             GetEnumerator();
 
-        // Private Methods
+        //* Private Methods
 
         /// <summary>
         /// Recursive add algorithm.

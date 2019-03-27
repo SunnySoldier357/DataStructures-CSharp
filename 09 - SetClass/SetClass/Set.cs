@@ -7,10 +7,10 @@ namespace SetClass
     public class Set<T> : IEnumerable<T>
         where T : IComparable<T>
     {
-        // Private Properties
+        //* Private Properties
         private readonly List<T> _items = new List<T>();
 
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// <para>
@@ -22,12 +22,12 @@ namespace SetClass
         /// </summary>
         public int Count => _items.Count;
 
-        // Constructors
+        //* Constructors
         public Set() { }
 
         public Set(IEnumerable<T> items) => AddRange(items);
 
-        // Public Methods
+        //* Public Methods
 
         /// <summary>
         /// <para>
@@ -83,7 +83,7 @@ namespace SetClass
 
         /// <summary>
         /// <para>
-        /// Removes the specified value from the set if found, return 
+        /// Removes the specified value from the set if found, return
         /// <see langword="true"/>. If the set does not contain the specified
         /// value, <see langword="false"/> is returned.
         /// </para>
@@ -102,7 +102,7 @@ namespace SetClass
         /// current and input set.
         /// </para>
         /// <para>
-        /// Performance: O(mn), where m and n are the number of items in the 
+        /// Performance: O(mn), where m and n are the number of items in the
         /// provided and current sets, respectively.
         /// </para>
         /// </summary>
@@ -127,7 +127,7 @@ namespace SetClass
         /// of the current and input sets.
         /// </para>
         /// <para>
-        /// Performance: O(mn), where m and n are the number of items in the 
+        /// Performance: O(mn), where m and n are the number of items in the
         /// provided and current sets, respectively.
         /// </para>
         /// </summary>
@@ -152,7 +152,7 @@ namespace SetClass
         /// of the current and input sets.
         /// </para>
         /// <para>
-        /// Performance: O(mn), where m and n are the number of items in the 
+        /// Performance: O(mn), where m and n are the number of items in the
         /// provided and current sets, respectively.
         /// </para>
         /// </summary>
@@ -170,11 +170,11 @@ namespace SetClass
 
         /// <summary>
         /// <para>
-        /// Returns a new set that is the result of the symmetric difference 
+        /// Returns a new set that is the result of the symmetric difference
         /// operation of the current and input sets.
         /// </para>
         /// <para>
-        /// Performance: O(mn), where m and n are the number of items in the 
+        /// Performance: O(mn), where m and n are the number of items in the
         /// provided and current sets, respectively.
         /// </para>
         /// </summary>

@@ -2,7 +2,7 @@ namespace SinglyLinkedList
 {
     public class LinkedListNode<T>
     {
-        // Public Properties
+        //* Public Properties
 
         /// <summary>
         /// The next node in the linked list (<see langword="null"/> if last node).
@@ -14,7 +14,7 @@ namespace SinglyLinkedList
         /// </summary>
         public T Value { get; internal set; }
 
-        // Constructors
+        //* Constructors
 
         /// <summary>
         /// Constructs a new node with the specified value.

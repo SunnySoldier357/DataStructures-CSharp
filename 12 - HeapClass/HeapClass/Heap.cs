@@ -150,7 +150,7 @@ namespace HeapClass
             return max;
         }
 
-        // Private Properties
+        //* Private Properties
         private void growBackingArray()
         {
             T[] newItems = new T[_items.Length * 2];

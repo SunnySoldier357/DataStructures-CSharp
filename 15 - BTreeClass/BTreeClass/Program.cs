@@ -1,12 +1,7 @@
-﻿using System;
-
-namespace BTreeClass
+﻿namespace BTreeClass
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        static void Main(string[] args) { }
     }
 }

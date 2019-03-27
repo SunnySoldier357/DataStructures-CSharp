@@ -1,12 +1,7 @@
-﻿using System;
-
-namespace QueueClass
+﻿namespace QueueClass
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        static void Main(string[] args) { }
     }
 }
