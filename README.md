@@ -37,5 +37,5 @@
 
 ## References
 
-- *Data Structures Part 1* by Robert Horvick
-- *Data Structures Part 2* by Robert Horvick
+- *Data Structures Succinctly Part 1* by Robert Horvick
+- *Data Structures Succinctly Part 2* by Robert Horvick
